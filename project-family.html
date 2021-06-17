@@ -1,0 +1,26 @@
+<html> <body>
+    <label id=familybook>Family Book</label>
+    <br><image id="image" style="width:200px; height:200px;" src="http://cmr.biola.edu/static/media/photos/2017/Jan/04/cache/biolaucm_38991540382_full.jpg"></image>
+    <br><label id="familylabel">My Family</label>
+    <br>
+    <button onclick="update()">Next</button>
+    <script>
+var images = ["http://cmr.biola.edu/static/media/photos/2017/Jan/04/cache/biolaucm_38991540382_full.jpg","https://kidsactivitiesblog.com/wp-content/uploads/2016/04/7-Ways-to-Become-a-Discouraged-Mom.jpg","https://tse1.mm.bing.net/th?id=OIP._lXdlGXnVApx_MT3tZcTQAHaEK&pid=Api&P=0&w=274&h=155","https://yt3.ggpht.com/a-/AAuE7mDEQDLTYj-bM6S8E00tMQmKTQIh4ZKL73HUWw=s900-mo-c-c0xffffffff-rj-k-no","https://tse4.mm.bing.net/th?id=OIP.FwqvWBsohRlRqmpI_ouwIAHaD4&pid=Api&P=0&w=296&h=156"];
+var names = ["Family","Mom","Dad","Sister","Brother"]; 
+var img_length = images.length;
+var name_length = names.length;
+var i = 0;
+function update()
+{
+    i++;
+    if(i>name_length){
+        i=0;
+    }
+    var update_image= images[i];
+    var update_name= names[i];
+    document.getElementById("image").src=update_image;
+    document.getElementById("familylabel").innerHTML=update_name;
+
+}
+    </script>
+</body>
